@@ -1,0 +1,21 @@
+name: Test Bundle
+
+on: [push, pull_request]
+
+jobs:
+  test_bundle:
+    runs-on: ubuntu-latest
+    name: test bundle
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: test bundle
+        uses: ./ # run test as a private action
+        with:
+          base-spec: test/petstore.yml
+          bundled-spec: test/petstore-bundled.yml
+
+      - name: check result
+        run: |
+          git diff --no-index test/petstore-bundled.yml test/petstore-full.yml
