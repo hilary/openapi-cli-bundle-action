@@ -1,0 +1,19 @@
+name: 'OpenAPI CLI Bundle'
+
+description: >
+  Bundle a multiple file OpenAPI spec into a single file using Redocly's openapi-cli
+
+inputs:
+  base-spec:
+    description: Path to the BASE OpenAPI specification file
+    required: true
+  bundled-spec:
+    description: Path to the output bundled OpenAPI specification file
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.base-spec }}
+    - ${{ inputs.bundled-spec }}
