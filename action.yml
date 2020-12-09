@@ -3,6 +3,10 @@ name: 'OpenAPI CLI Bundle'
 description: >
   Bundle a multiple file OpenAPI spec into a single file using Redocly's openapi-cli
 
+branding:
+  icon: box
+  color: green
+
 inputs:
   base-spec:
     description: Path to the BASE OpenAPI specification file
