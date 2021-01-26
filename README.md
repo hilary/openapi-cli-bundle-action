@@ -1,6 +1,9 @@
+![Test Bundle](https://github.com/hilary/openapi-cli-bundle-action/workflows/Test%20Bundle/badge.svg?branch=main&event=push)
+
 # OpenAPI CLI Bundle action
 
-Bundle a multiple file OpenAPI spec into a single file using 
+Bundle a multiple file OpenAPI spec into a single file spec with the
+traditional layout.
 
 ## Credits
 
@@ -19,3 +22,4 @@ steps:
       base-spec: My-API.yml
       bundled-spec: dist/My-API-bundled.yml
 ```
+
